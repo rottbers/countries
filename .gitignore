@@ -1,0 +1,7 @@
+
+/node_modules
+/build
+.env.development
+yarn-debug.log*
+yarn-error.log*
+src/index.css

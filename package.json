@@ -1,0 +1,60 @@
+{
+  "name": "countries",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "typescript": "~3.7.2"
+  },
+  "devDependencies": {
+    "@apollo/client": "^3.1.4",
+    "autoprefixer": "^9.8.6",
+    "graphql": "^15.3.0",
+    "postcss-cli": "^7.1.2",
+    "tailwindcss": "^1.8.4"
+  },
+  "scripts": {
+    "css:watch": "postcss build src/styles/tailwind.css -o src/index.css -w",
+    "css:build": "tailwind build src/styles/tailwind.css -o src/index.css",
+    "start": "yarn css:watch & react-scripts start",
+    "build": "yarn css:build && react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "tailwindcss": {
+        "purge": [
+          "./src/**/*.tsx"
+        ],
+        "future": {
+          "purgeLayersByDefault": true,
+          "removeDeprecatedGapUtilities": true
+        }
+      }
+    }
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
